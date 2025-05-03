@@ -8,7 +8,7 @@ class Program
         int i = 0;
         int big = 0;
         int total = 0;
-        int mean = 0; 
+        float mean = 0; 
         Console.WriteLine("Please keep entering numbers and when you are finished put a 0, thanks.");
         do
         {
@@ -21,15 +21,15 @@ class Program
         {
             Console.WriteLine(input);
             total = total + input;
-            i = i +1;
-            mean = total / i;
+            i = i + 1;
+            mean = (float)total / i;
             if (input > big)
             {
                 big = input;
             }
         }
         Console.WriteLine($"Your Sum is {total}");
-        Console.WriteLine($"Your average is {mean}");
+        Console.WriteLine($"Your average is {mean:F3}");
         Console.WriteLine($"Your largest number is {big}");
     }
 }
